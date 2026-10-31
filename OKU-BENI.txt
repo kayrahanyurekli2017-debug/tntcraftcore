@@ -1,0 +1,28 @@
+TNTCRAFT CORE - SUNUCU MODU (NeoForge 26.1.2)
+
+KOMUTLAR
+Evler     : /sethome [ad]   /home [ad]   /delhome <ad>   /homes
+Ekonomi   : /balance (/bal)   /pay <oyuncu> <miktar>   /daily   /baltop
+Yönetici  : /eco give|take|set <oyuncu> <miktar>
+Satış     : /sell (elindeki eşyayı satar)   /prices (fiyat listesi)
+
+JAR'I NASIL ALIRIM? (GitHub bulutta derler, bilgisayarına bir şey kurmana gerek yok)
+1) GitHub'da yeni bir repo aç: tntcraft-core (Public olsun).
+2) Bu klasörün İÇİNDEKİ her şeyi (build.gradle, src, gradle, .github ... hepsi) repoya yükle:
+   Add file > Upload files > klasörün içindekileri sürükle > Commit changes.
+   ".github" klasörü görünmediyse: Add file > Create new file, ad kutusuna
+   .github/workflows/build.yml yaz ve bu zip'teki build.yml içeriğini yapıştır.
+3) Repoda "Actions" sekmesine gir. "Build" çalışır (3-6 dk). Yeşil tik olunca
+   o çalışmaya tıkla, en altta "Artifacts" bölümünden "tntcraftcore-jar" dosyasını indir.
+   Zip'in içinde tntcraftcore-1.0.0.jar vardır.
+4) Kırmızı çarpı olursa: o adıma tıkla, hata yazısını kopyalayıp bana yapıştır.
+
+SUNUCUYA KURMA
+- tntcraftcore-1.0.0.jar dosyasını sunucunun "mods" klasörüne yükle (Aternos: Files > mods).
+- Sunucuyu aç. Veriler config/tntcraft/data.json içinde tutulur.
+- Yönetici olmak için data.json içindeki "admins" listesine oyuncu adını yaz
+  (örn. "admins": ["Ahmet"]) ve sunucuyu yeniden başlat. Konsol her zaman /eco kullanabilir.
+- Çakma (offline) sunucuda adlar taklit edilebilir. AuthMe gibi bir giriş eklentisi/modu kullan.
+
+AYARLAR (data.json > settings)
+currency, startBalance, maxHomes, dailyReward, sellPrices (eşya fiyatları).
